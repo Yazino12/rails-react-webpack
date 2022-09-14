@@ -3,7 +3,7 @@ import axios from 'axios';
 
 const getMessage = createAsyncThunk('message/getMessage', async () =>
   axios
-    .get(`/message`)
+    .get(`/greeting`)
     .then((response) => {
       if (!response.statusText === 'OK') throw Error(response.statusText);
       return response.data;
